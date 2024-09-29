@@ -1,0 +1,420 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f5f5f5;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.menu-button {
+    font-size: 24px;
+    border: none;
+    background: none;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.brand {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.brand span {
+    color: #f9b233; /* Accent color for "Mobile" */
+}
+
+/* Search Bar Styling */
+.header-center {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.search-container {
+    position: relative;
+    width: 70%;
+}
+
+.search-bar {
+    width: 100%;
+    padding: 10px;
+    padding-left: 40px;  /* Space for search icon */
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+.search-bar::placeholder {
+    color: #999;
+}
+
+.search-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #666;
+}
+
+/* Right Side of Header */
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-right a {
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #000;
+    display: flex;
+    align-items: center;
+}
+
+.header-right .sign-up {
+    margin-right: 30px;  /* Added more spacing between Sign Up and contact number */
+}
+
+.header-right a i {
+    margin-right: 5px;
+    font-size: 18px;
+}
+
+.header-right .contact {
+    font-weight: bold;
+}
+
+/* Banner Section */
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #000; /* Exact black background */
+    color: #fff;
+    padding: 40px;
+    position: relative;
+    border-radius: 10px;
+    margin: 50px auto;
+    max-width: 1200px;
+    overflow: hidden;
+}
+.banner2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #cecece; 
+    color: #000;
+    padding: 40px;
+    position: relative;
+    border-radius: 10px;
+    margin: 50px auto;
+    max-width: 1200px;
+    overflow: hidden;
+}
+
+.banner-content {
+    max-width: 50%;
+    z-index: 2; /* Ensures text stays on top of the image */
+}
+
+.banner h2 {
+    font-size: 18px;
+    color: #fff;
+}
+
+.banner h1 {
+    font-size: 50px;
+    color: #fff;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.banner p {
+    font-size: 24px;
+    color: #f9b233;
+    margin-top: 10px;
+}
+
+
+
+.banner-image {
+    position: relative;
+    z-index: 1;
+    max-width: 100%;
+    right: 60px; /* Adjust the overlap on the right */
+    transform: rotate(-35deg); /* Slight rotation for styling */
+    transform-origin: center; /* Ensure the image rotates around its center */
+    transition: transform 0.5s ease-in-out;
+}
+
+
+.banner-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* Carousel Dots */
+.dots {
+    margin-top: 20px;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+}
+.dot1 {
+    height: 10px;
+    width: 10px;
+    background-color: #000;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* Carousel Buttons */
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    color: #fff;
+    z-index: 3; /* Ensure buttons stay on top */
+}
+
+.left-button {
+    left: -40px; /* Adjust button position */
+}
+
+.right-button {
+    right: -40px; /* Adjust button position */
+}
+
+.carousel-button i {
+    font-size: 18px;
+}
+
+/* Responsive Banner for Smaller Screens */
+@media (max-width: 768px) {
+    .banner {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .banner-content {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .banner-image {
+        max-width: 100%;
+        right: 0;
+    }
+
+    .banner h1 {
+        font-size: 36px;
+    }
+
+    .banner p {
+        font-size: 20px;
+    }
+}
+
+
+/* Footer Section */
+.footer {
+    background-color: #f5f5f5;
+    padding: 40px 20px;
+    margin-top: 50px;
+    font-family: Arial, sans-serif;
+}
+
+/* Section Styles */
+.newsletter-section {
+    background-color: #000;
+    padding: 50px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 50px auto;
+    color: #fff;
+}
+
+.newsletter-text {
+    font-size: 24px;
+    font-weight: bold;
+    max-width: 50%;
+    text-transform: uppercase;
+}
+
+.newsletter-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.newsletter-form input[type="email"], 
+.newsletter-form input[type="submit"] {
+    padding: 15px;
+    width: 350px; /* Ensure same width for both input and button */
+    border-radius: 25px;
+    border: none;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.newsletter-form input[type="submit"] {
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+}
+
+.newsletter-form input[type="email"]::placeholder {
+    color: #999;
+}
+
+/* Icon inside email input */
+.newsletter-form .email-container {
+    position: relative;
+    width: 100%;
+}
+
+.newsletter-form .email-container input[type="email"] {
+    padding-left: 55px; 
+    width: 350px; /* Same as email input */
+    height: 20px;
+}
+
+.newsletter-form .email-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-80%);
+    font-size: 20px; /* Adjust icon size */
+    color: #666;
+}
+
+/* Ensuring button and input fields are the same size */
+.newsletter-form input[type="submit"] {
+    width: 380px; /* Same as email input */
+    height: 20px; /* To match the height of the email input */
+    border-radius: 25px;
+}
+
+
+/* Footer Links Section */
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.footer-column {
+    max-width: 200px;
+}
+
+.footer-column h3 {
+    font-size: 24px;
+    color: #000;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-column h3 span {
+    color: #f9b233;
+}
+
+.footer-column h4 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+.footer-column p {
+    font-size: 14px;
+    color: #666;
+}
+
+.footer-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Social Icons */
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: #000;
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.social-icons a:hover {
+    color: #f9b233;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    color: #999;
+}
