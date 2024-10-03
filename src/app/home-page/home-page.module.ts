@@ -4,6 +4,10 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { MainComponent } from './main/main.component';
+import { BannerComponent } from './banner/banner.component';
+import { SearchBarComponent } from './search-bar/search-bar.component';
+import { TrendingPhonesComponent } from './trending-phones/trending-phones.component';
+import { VendorComponent } from './vendor/vendor.component';
 
 
 
@@ -12,7 +16,11 @@ import { MainComponent } from './main/main.component';
     HeaderComponent,
     FooterComponent,
     SignInComponent,
-    MainComponent
+    MainComponent,
+    BannerComponent,
+    SearchBarComponent,
+    TrendingPhonesComponent,
+    VendorComponent
   ],
   imports: [
     CommonModule

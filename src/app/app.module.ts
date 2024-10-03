@@ -1,20 +1,26 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './home-page/header/header.component';  // Import Header Component
+import { HeaderComponent } from './home-page/header/header.component';  
 import { FooterComponent } from './home-page/footer/footer.component'; 
+import { BannerComponent } from './home-page/banner/banner.component'; 
+import { SignInComponent } from './home-page/sign-in/sign-in.component'; 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,  // Declare HeaderComponent
-    FooterComponent
+    HeaderComponent,  
+    FooterComponent,
+    BannerComponent,
+    SignInComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
