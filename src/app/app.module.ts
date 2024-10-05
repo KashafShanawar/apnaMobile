@@ -8,14 +8,15 @@ import { HeaderComponent } from './home-page/header/header.component';
 import { FooterComponent } from './home-page/footer/footer.component'; 
 import { BannerComponent } from './home-page/banner/banner.component'; 
 import { SignInComponent } from './home-page/sign-in/sign-in.component'; 
-
+import { TrendingPhonesComponent } from './home-page/trending-phones/trending-phones.component';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,  
     FooterComponent,
     BannerComponent,
-    SignInComponent
+    SignInComponent,
+    TrendingPhonesComponent
   ],
   imports: [
     BrowserModule,

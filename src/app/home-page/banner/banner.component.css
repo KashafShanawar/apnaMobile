@@ -25,6 +25,8 @@ body {
 }
 
 .banner-content {
+    /* right: 30px; */
+    margin-left: 35px;
     max-width: 50%;
     z-index: 2; /* Ensures text stays on top of the image */
 }
@@ -51,8 +53,8 @@ body {
     position: relative;
     z-index: 1;
     max-width: 50%;
-    right: 40px;
-    transform: rotate(-35deg); /* Slight rotation for styling */
+    right: 75px;
+    transform: rotate(-38deg);
     transform-origin: center;
     transition: transform 0.5s ease-in-out;
 }
