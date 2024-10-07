@@ -1,53 +1,67 @@
 <div class="deals-section">
     <div class="deals-header">
       <h2>Grab the best deal on <span>Smartphones</span></h2>
-      <a href="#" class="view-all">View All</a>
+      <a href="#" class="view-all">View All &nbsp;<strong style="font-size: 1.1em; font-weight: bold;">&gt;</strong></a>
     </div>
+    <div class="divider"></div> <!-- Line below the header -->
+
   
     <div class="product-carousel-wrapper">
-    <button class="carousel-btn left-btn" (click)="scrollLeft()">&#8249;</button>
-    <div class="product-cards-container" id="scrollable-container">
+      <button class="carousel-btn left-btn" (click)="scrollLeft()" [class.hidden]="!showLeftButton">&#8249;</button>
+      
+      <div class="product-cards-container" #scrollContainer>
       <div class="product-cards">
         <div class="product-card">
           <div class="discount-badge">55% OFF</div>
-          <img src="assets/images/mobile.jpg" alt="Galaxy S22 Ultra" class="product-image" />
-          <p class="product-name">Galaxy S22 Ultra</p>
+          <div class="img-bg">  <img src="assets/images/mobile.jpg" alt="Galaxy S22 Ultra" class="product-image" /> </div>
+          <p class="product-name">Galaxy S22 (4GB | 64 GB)</p>
           <p class="product-price">Rs 32999</p>
+          <div class="divider-img"></div>
           <p class="product-tag">Lowest Price!</p>
         </div>
   
         <div class="product-card">
-          <img src="assets/images/mobile.jpg" alt="Galaxy M13 (4GB | 64 GB)" class="product-image" />
-          <p class="product-name">Galaxy M13 (4GB | 64 GB)</p>
-          <p class="product-price">Rs 32999</p>
-          <p class="product-tag">Lowest Price!</p>
-        </div>
+            <div class="discount-badge">55% OFF</div>
+            <div class="img-bg">  <img src="assets/images/mobile.jpg" alt="Galaxy S22 Ultra" class="product-image" /> </div>
+            <p class="product-name">Galaxy S22 (4GB | 64 GB)</p>
+            <p class="product-price">Rs 32999</p>
+            <div class="divider-img"></div>
+            <p class="product-tag">Lowest Price!</p>
+          </div>
+  
+          <div class="product-card">
+            <div class="discount-badge">55% OFF</div>
+            <div class="img-bg">  <img src="assets/images/mobile.jpg" alt="Galaxy S22 Ultra" class="product-image" /> </div>
+            <p class="product-name">Galaxy S22 (4GB | 64 GB)</p>
+            <p class="product-price">Rs 32999</p>
+            <div class="divider-img"></div>
+            <p class="product-tag">Lowest Price!</p>
+          </div>
   
         <div class="product-card">
-          <img src="assets/images/mobile.jpg" alt="Galaxy M33 (4GB | 64 GB)" class="product-image" />
-          <p class="product-name">Galaxy M33 (4GB | 64 GB)</p>
-          <p class="product-price">Rs 32999</p>
-          <p class="product-tag">Lowest Price!</p>
-        </div>
+            <div class="discount-badge">55% OFF</div>
+            <div class="img-bg">  <img src="assets/images/mobile.jpg" alt="Galaxy S22 Ultra" class="product-image" /> </div>
+            <p class="product-name">Galaxy S22 (4GB | 64 GB)</p>
+            <p class="product-price">Rs 32999</p>
+            <div class="divider-img"></div>
+            <p class="product-tag">Lowest Price!</p>
+          </div>
   
         <div class="product-card">
-          <img src="assets/images/mobile.jpg" alt="Galaxy M53 (4GB | 64 GB)" class="product-image" />
-          <p class="product-name">Galaxy M53 (4GB | 64 GB)</p>
-          <p class="product-price">Rs 32999</p>
-          <p class="product-tag">Lowest Price!</p>
-        </div>
-  
-        <div class="product-card">
-          <img src="assets/images/mobile.jpg" alt="Galaxy M53 (4GB | 64 GB)" class="product-image" />
-          <p class="product-name">Galaxy M53 (4GB | 64 GB)</p>
-          <p class="product-price">Rs 32999</p>
-          <p class="product-tag">Lowest Price!</p>
-        </div>
+            <div class="discount-badge">55% OFF</div>
+            <div class="img-bg">  <img src="assets/images/mobile.jpg" alt="Galaxy S22 Ultra" class="product-image" /> </div>
+            <p class="product-name">Galaxy S22 (4GB | 64 GB)</p>
+            <p class="product-price">Rs 32999</p>
+            <div class="divider-img"></div>
+            <p class="product-tag">Lowest Price!</p>
+          </div>
 
         <div class="product-card">
-            <img src="assets/images/mobile.jpg" alt="Galaxy M53 (4GB | 64 GB)" class="product-image" />
-            <p class="product-name">Galaxy M53 (4GB | 64 GB)</p>
+            <div class="discount-badge">55% OFF</div>
+            <div class="img-bg">  <img src="assets/images/mobile.jpg" alt="Galaxy S22 Ultra" class="product-image" /> </div>
+            <p class="product-name">Galaxy S22 (4GB | 64 GB)</p>
             <p class="product-price">Rs 32999</p>
+            <div class="divider-img"></div>
             <p class="product-tag">Lowest Price!</p>
           </div>
     
@@ -55,22 +69,16 @@
             <img src="assets/images/mobile.jpg" alt="Galaxy M53 (4GB | 64 GB)" class="product-image" />
             <p class="product-name">Galaxy M53 (4GB | 64 GB)</p>
             <p class="product-price">Rs 32999</p>
+            <div class="divider-img"></div>
             <p class="product-tag">Lowest Price!</p>
           </div>
 
-          <div class="product-card">
-            <img src="assets/images/mobile.jpg" alt="Galaxy M53 (4GB | 64 GB)" class="product-image" />
-            <p class="product-name">Galaxy M53 (4GB | 64 GB)</p>
-            <p class="product-price">Rs 32999</p>
-            <p class="product-tag">Lowest Price!</p>
+
+
+          <div class="product-card view-all-card">
+            <a href="#" class="view-all-text">View All Mobiles</a>
           </div>
-    
-          <div class="product-card">
-            <img src="assets/images/mobile.jpg" alt="Galaxy M53 (4GB | 64 GB)" class="product-image" />
-            <p class="product-name">Galaxy M53 (4GB | 64 GB)</p>
-            <p class="product-price">Rs 32999</p>
-            <p class="product-tag">Lowest Price!</p>
-          </div>
+
       </div>
       </div>
       <button class="carousel-btn right-btn" (click)="scrollRight()">&#8250;</button>

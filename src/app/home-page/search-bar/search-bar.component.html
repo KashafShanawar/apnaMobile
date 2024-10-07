@@ -1,1 +1,18 @@
-<p>search-bar works!</p>
+<div class="budget-container">
+    <h2>Find the Best Phone For You</h2>
+  
+    <div class="slider-container">
+      <label for="budget">What's Your Budget?</label>
+      <div class="slider">
+        <input type="range" min="50" max="200" [(ngModel)]="budgetMin" id="minRange">
+        <input type="range" min="50" max="200" [(ngModel)]="budgetMax" id="maxRange">
+      </div>
+      <div class="price-values">
+        <span>${{ budgetMin }}</span>
+        <span>${{ budgetMax }}</span>
+      </div>
+    </div>
+  
+    <button class="search-btn">Search</button>
+  </div>
+  

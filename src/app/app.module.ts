@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,6 +10,10 @@ import { FooterComponent } from './home-page/footer/footer.component';
 import { BannerComponent } from './home-page/banner/banner.component'; 
 import { SignInComponent } from './home-page/sign-in/sign-in.component'; 
 import { TrendingPhonesComponent } from './home-page/trending-phones/trending-phones.component';
+import { SearchBarComponent } from './home-page/search-bar/search-bar.component';
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,12 +21,14 @@ import { TrendingPhonesComponent } from './home-page/trending-phones/trending-ph
     FooterComponent,
     BannerComponent,
     SignInComponent,
-    TrendingPhonesComponent
+    TrendingPhonesComponent,
+    SearchBarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

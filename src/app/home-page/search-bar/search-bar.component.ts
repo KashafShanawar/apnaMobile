@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class SearchBarComponent {
 
+  budgetMin: number = 50; // Default minimum value
+  budgetMax: number = 200; // Default maximum value
+  
 }

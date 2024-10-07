@@ -1,0 +1,107 @@
+.budget-container {
+    background-color: #000000;
+    border-radius: 15px;
+    padding: 20px;
+    color: white;
+    max-width: 1250px;
+    height: 250px;
+    margin: 30px auto;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    background-image: url('/assets/stars-bg.jpg'); /* Add your background image */
+    background-size: cover;
+    text-align: center;
+  }
+  
+  .budget-container h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  
+  .slider-container {
+    margin: 20px 0;
+  }
+  
+  .slider-container label {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  .slider {
+    width: 80%;
+    margin: 25px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .slider input[type=range] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 28%;
+    margin-top: 2px;
+    background: transparent;
+    position: absolute;
+    top: 0;
+  }
+  
+  .slider input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 5px;
+    background: #ffffff;
+    border: none;
+    border-radius: 2px;
+  }
+  
+  .slider input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 21px;
+    height: 21px;
+    background: white;
+    margin-top: -6px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+    border: 1px solid #cccccc;
+  }
+  
+  .slider input[type=range]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+    border: 1px solid #cccccc;
+  }
+  
+  .price-values {
+    display: flex;
+    justify-content: space-between;
+    width: 26%;
+    margin: 0 auto;
+    font-size: 22px;
+    margin-top: 20px;
+  }
+  
+  .search-btn {
+    background-color: #f5b600;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    color: black;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    cursor: pointer;
+  }
+  
+  .search-btn:hover {
+    background-color: #e0a500;
+  }
+  
