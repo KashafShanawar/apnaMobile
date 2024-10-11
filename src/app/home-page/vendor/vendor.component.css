@@ -1,0 +1,122 @@
+.vendors-section {
+    padding: 20px;
+    max-width: 85%;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  .vendors-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .vendors-header h2 {
+    font-size: 24px;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  .vendors-header h2 span {
+    font-weight: 600;
+    color: #000;
+  }
+  
+  .divider {
+    height: 3px;
+    background: linear-gradient(to right, #000 27%, #e0e0e0 20%);
+    width: 100%;
+    margin-top: 2px;
+    margin-bottom: 30px;
+  }
+  
+  .vendor-carousel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .vendor-cards-container {
+    overflow-x: hidden;
+    white-space: nowrap;
+    padding-bottom: 10px;
+    width: 100%;
+  }
+  
+  .vendor-cards {
+    display: inline-flex;
+    gap: 30px;
+    justify-content: center;
+  }
+  
+  .vendor-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease, border 0.3s ease;
+  }
+  
+  .vendor-card:hover {
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .vendor-logo {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover; 
+    background-color: #fff;
+    padding: 15px; 
+    border: 1px solid #e0e0e0; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+  }
+  
+  .vendor-card.selected .vendor-logo {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); 
+    border: 2px solid #000;
+  }
+  
+  .vendor-name {
+    margin-top: 12px; 
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+    width: 50px;
+    height: 50px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .left-btn {
+    left: -25px;
+    font-size: 22px;
+  }
+  
+  .right-btn {
+    right: -25px;
+    font-size: 22px;
+  }
+  
+  .carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  .hidden {
+    display: none;
+  }
+  

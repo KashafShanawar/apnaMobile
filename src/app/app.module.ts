@@ -11,6 +11,7 @@ import { BannerComponent } from './home-page/banner/banner.component';
 import { SignInComponent } from './home-page/sign-in/sign-in.component'; 
 import { TrendingPhonesComponent } from './home-page/trending-phones/trending-phones.component';
 import { SearchBarComponent } from './home-page/search-bar/search-bar.component';
+import { VendorComponent } from './home-page/vendor/vendor.component';
 
 
 
@@ -22,7 +23,8 @@ import { SearchBarComponent } from './home-page/search-bar/search-bar.component'
     BannerComponent,
     SignInComponent,
     TrendingPhonesComponent,
-    SearchBarComponent
+    SearchBarComponent,
+    VendorComponent
   ],
   imports: [
     BrowserModule,

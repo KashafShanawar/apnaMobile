@@ -1,1 +1,23 @@
-<p>vendor works!</p>
+<div class="vendors-section">
+    <div class="vendors-header">
+      <h2>Vendors</h2>
+      <a href="#" class="view-all">View All &nbsp;<strong style="font-size: 1.1em; font-weight: bold;">&gt;</strong></a>
+    </div>
+    <div class="divider"></div>
+  
+    <div class="vendor-carousel-wrapper">
+      <button class="carousel-btn left-btn" (click)="scrollLeft()" [class.hidden]="!showLeftButton">&#8249;</button>
+      
+      <div class="vendor-cards-container" #scrollContainer>
+        <div class="vendor-cards">
+          <div class="vendor-card" *ngFor="let vendor of vendors">
+            <img [src]="vendor.logo" [alt]="vendor.name" class="vendor-logo" />
+            <p class="vendor-name">{{ vendor.name }}</p>
+          </div>
+        </div>
+      </div>
+      
+      <button class="carousel-btn right-btn" (click)="scrollRight()">&#8250;</button>
+    </div>
+  </div>
+  
