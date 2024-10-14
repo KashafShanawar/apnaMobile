@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { MobileScreenComponent } from './mobile-screen/mobile-screen.component';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    MobileScreenComponent
+  ],
   imports: [
     CommonModule
   ]
