@@ -1,23 +1,15 @@
-<div class="vendors-section">
-    <div class="vendors-header">
-      <h2>Vendors</h2>
-      <a href="#" class="view-all">View All &nbsp;<strong style="font-size: 1.1em; font-weight: bold;">&gt;</strong></a>
-    </div>
-    <div class="divider"></div>
-  
-    <div class="vendor-carousel-wrapper">
-      <button class="carousel-btn left-btn" (click)="scrollLeft()" [class.hidden]="!showLeftButton">&#8249;</button>
-      
-      <div class="vendor-cards-container" #scrollContainer>
-        <div class="vendor-cards">
-          <div class="vendor-card" *ngFor="let vendor of vendors">
-            <img [src]="vendor.logo" [alt]="vendor.name" class="vendor-logo" />
-            <p class="vendor-name">{{ vendor.name }}</p>
-          </div>
-        </div>
-      </div>
-      
-      <button class="carousel-btn right-btn" (click)="scrollRight()">&#8250;</button>
-    </div>
+<section class="vendor-banner-bold">
+  <div class="banner-content">
+      <h2>Top Deals on Vendors</h2>
+      <h1>EXCLUSIVE VENDORS</h1>
+      <p>Discover premium vendors and enjoy the best discounts.</p>
+      <a href="/vendors" class="view-all-btn">Explore Now</a>
   </div>
-  
+
+  <div class="background-shapes">
+    <div class="shape shape-big"></div>
+    <div class="shape shape-small"></div>
+    <div class="shape shape-medium"></div>
+    <div class="shape shape-angle"></div>
+  </div>
+</section>
