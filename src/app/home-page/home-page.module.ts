@@ -8,6 +8,9 @@ import { BannerComponent } from './banner/banner.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { TrendingPhonesComponent } from './trending-phones/trending-phones.component';
 import { VendorComponent } from './vendor/vendor.component';
+import { FormsModule } from '@angular/forms'; 
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 
 
@@ -23,7 +26,9 @@ import { VendorComponent } from './vendor/vendor.component';
     VendorComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class HomePageModule { }
