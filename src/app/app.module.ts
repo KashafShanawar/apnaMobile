@@ -11,7 +11,10 @@ import { BannerComponent } from './home-page/banner/banner.component';
 import { SignInComponent } from './home-page/sign-in/sign-in.component'; 
 import { TrendingPhonesComponent } from './home-page/trending-phones/trending-phones.component';
 import { SearchBarComponent } from './home-page/search-bar/search-bar.component';
-import { VendorComponent } from './home-page/vendor/vendor.component';
+import { BrandComponent} from './home-page/brand/brands.component';
+import { VendorComponent } from './vendor-page/vendor/vendor.component';
+import { HttpClientModule } from '@angular/common/http';
+import { VendorService } from './vendor-page/services/vendor.service';
 
 
 
@@ -24,15 +27,17 @@ import { VendorComponent } from './home-page/vendor/vendor.component';
     SignInComponent,
     TrendingPhonesComponent,
     SearchBarComponent,
+    BrandComponent,
     VendorComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [VendorService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -5,10 +5,10 @@
 <main>
 
 <router-outlet></router-outlet>
-<app-banner></app-banner>
-<app-search-bar></app-search-bar>
-<app-trending-phones></app-trending-phones>
-<app-vendor></app-vendor>
+  <app-banner *ngIf="showHomePageComponents"></app-banner>
+  <app-search-bar *ngIf="showHomePageComponents"></app-search-bar>
+  <app-trending-phones *ngIf="showHomePageComponents"></app-trending-phones>
+  <app-brand *ngIf="showHomePageComponents"></app-brand>
 </main>
 
 

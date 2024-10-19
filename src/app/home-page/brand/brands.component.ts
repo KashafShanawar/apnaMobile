@@ -1,16 +1,16 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
-  selector: 'app-vendor',
-  templateUrl: './vendor.component.html',
-  styleUrls: ['./vendor.component.css']
+  selector: 'app-brand',
+  templateUrl: './brands.component.html',
+  styleUrls: ['./brands.component.css']
 })
-export class VendorComponent {
+export class BrandComponent {
   @ViewChild('scrollContainer', { read: ElementRef }) scrollContainer!: ElementRef;
 
   showLeftButton = false;
 
-  vendors = [
+  brands = [
     { name: 'Apple', logo: 'assets/images/apple.jpg' },
     { name: 'Samsung', logo: 'assets/images/samsung.png' },
     { name: 'Huawei', logo: 'assets/images/huawei.jpg' },
