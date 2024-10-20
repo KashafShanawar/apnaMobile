@@ -7,7 +7,7 @@ import { MainComponent } from './main/main.component';
 import { BannerComponent } from './banner/banner.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { TrendingPhonesComponent } from './trending-phones/trending-phones.component';
-import { VendorComponent } from './brand/brand.component';
+import { BrandComponent } from './brand/brands.component';
 import { FormsModule } from '@angular/forms'; 
 import { ReactiveFormsModule } from '@angular/forms';
 
@@ -23,7 +23,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     BannerComponent,
     SearchBarComponent,
     TrendingPhonesComponent,
-    VendorComponent
+    BrandComponent
   ],
   imports: [
     CommonModule,

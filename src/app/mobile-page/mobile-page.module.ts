@@ -1,15 +1,16 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { MobileScreenComponent } from './mobile-screen/mobile-screen.component';
-
-
+import { CommonModule } from '@angular/common'; 
+import { MobileComponent } from './mobile/mobile.component';
+import { MobileService } from './services/mobile.service';
 
 @NgModule({
   declarations: [
-    MobileScreenComponent
+    MobileComponent 
   ],
   imports: [
-    CommonModule
-  ]
+    CommonModule 
+  ],
+providers: [MobileService]
 })
-export class MobilePageModule { }
+export class MobilePageModule {}
+
