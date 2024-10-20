@@ -1,0 +1,153 @@
+/* Center the layout and container styling */
+.mobile-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.mobile-details {
+  display: flex;
+  gap: 50px;
+  align-items: flex-start;
+}
+
+/* Styling for product image */
+.mobile-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-image {
+  width: 300px;
+  height: auto;
+  object-fit: contain;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.thumbnail-images {
+  display: flex;
+  gap: 10px;
+}
+
+.thumbnail {
+  width: 50px;
+  height: auto;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Styling for mobile information */
+.mobile-info {
+  flex-grow: 1;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Ratings */
+.ratings {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+/* Color and Memory Options */
+.color-options, .memory-options {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.color-button, .memory-button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #f3f3f3;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.color-button.active, .memory-button.active {
+  border-color: #000;
+  font-weight: bold;
+}
+
+.color-button:hover, .memory-button:hover {
+  background-color: #ddd;
+}
+
+/* Styling for checkboxes */
+.details-checks {
+  margin-bottom: 20px;
+}
+
+.details-checks label {
+  margin-right: 15px;
+  font-size: 16px;
+}
+
+/* Price section styling */
+.price-section {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.average-price, .lowest-price {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.buy-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.buy-button:hover {
+  background-color: #45a049;
+}
+
+/* Styling for additional information tabs */
+.additional-info {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.info-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-bottom: 2px solid #ddd;
+}
+
+.info-tabs li {
+  cursor: pointer;
+  padding: 10px 15px;
+  font-size: 18px;
+  transition: color 0.3s;
+  position: relative;
+}
+
+.info-tabs li.active-tab {
+  font-weight: bold;
+  border-bottom: 2px solid #000;
+}

@@ -1,0 +1,63 @@
+<div class="mobile-container">
+  <div class="mobile-details">
+    <!-- Mobile Image with thumbnails -->
+    <div class="mobile-image">
+      <img [src]="selectedImage" alt="{{ mobileData?.phone_name }}" class="product-image">
+      <div class="thumbnail-images">
+        <img *ngFor="let image of mobileData?.images" [src]="image" class="thumbnail" (click)="selectImage(image)">
+      </div>
+    </div>
+
+    <!-- Mobile Info -->
+    <div class="mobile-info">
+      <h2>{{ mobileData?.phone_name }} {{ selectedColor }} {{ selectedMemory }}</h2>
+      <div class="ratings">
+        ⭐⭐⭐⭐⭐ <span>(2)</span>
+      </div>
+
+      <!-- Colors Selection -->
+      <div class="color-options">
+        <button *ngFor="let color of mobileData?.colors" class="color-button" [ngClass]="{'active': selectedColor === color}" (click)="selectColor(color)">
+          {{ color }}
+        </button>
+      </div>
+
+      <!-- Memory Selection -->
+      <div class="memory-options">
+        <button *ngFor="let memory of mobileData?.memory" class="memory-button" [ngClass]="{'active': selectedMemory === memory}" (click)="selectMemory(memory)">
+          {{ memory }}
+        </button>
+      </div>
+
+      <!-- Checkboxes for additional info -->
+      <div class="details-checks">
+        <label><input type="checkbox" checked> PTA-Approved</label>
+        <label><input type="checkbox" checked> Used</label>
+        <label><input type="checkbox" checked> Installments</label>
+      </div>
+
+      <!-- Prices Section -->
+      <div class="price-section">
+        <div class="average-price">
+          <span>Average Price</span>
+          <span>{{ statistics?.avg_price | currency:'PKR' }}</span>
+        </div>
+        <div class="divider"></div> <!-- Line between price boxes -->
+        <div class="lowest-price">
+          <span>Cheapest Option</span>
+          <span>{{ statistics?.lowest_price | currency:'PKR' }}</span>
+          <button class="buy-button">Get via ApnaMobile</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Additional Info (Tabs) -->
+  <div class="additional-info">
+    <ul class="info-tabs">
+      <li [ngClass]="{'active-tab': selectedTab === 'vendors'}" (click)="selectTab('vendors')">Vendors</li>
+      <li [ngClass]="{'active-tab': selectedTab === 'specifications'}" (click)="selectTab('specifications')">Specifications</li>
+      <li [ngClass]="{'active-tab': selectedTab === 'reviews'}" (click)="selectTab('reviews')">Reviews</li>
+    </ul>
+  </div>
+</div>
