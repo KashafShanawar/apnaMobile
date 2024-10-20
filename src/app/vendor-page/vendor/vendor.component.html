@@ -1,72 +1,78 @@
 <div class="vendor-details-container">
-    <img [src]="vendor.image_url" alt="Vendor Logo" *ngIf="vendor.image_url">
-  
-    <div class="vendor-details">
-      <h1>{{ vendor.vendor_name }}</h1>
-      <p><strong>Location:</strong> {{ vendor.location }}</p>
-      <p><strong>Phone 1:</strong> {{ vendor.phone_number1 }}</p>
-      <p><strong>Phone 2:</strong> {{ vendor.phone_number2 }}</p>
-      <p><strong>About Us:</strong> {{ vendor.about_us }}</p>
-  
-      <div class="vendor-actions">
-        <button class="btn-primary">Check Website</button>
-        <button class="btn-secondary">Share</button>
+  <img [src]="vendor.image_url" alt="Vendor Logo" *ngIf="vendor.image_url">
+
+  <div class="vendor-details">
+    <h1>{{ vendor.vendor_name }}</h1>
+    <p><strong>Location:</strong> {{ vendor.location }}</p>
+    <p><strong>Phone 1:</strong> {{ vendor.phone_number1 }}</p>
+    <p><strong>Phone 2:</strong> {{ vendor.phone_number2 }}</p>
+    <p><strong>About Us:</strong> {{ vendor.about_us }}</p>
+
+    <div class="vendor-actions">
+      <button class="btn-primary">Check Website</button>
+      <button class="btn-secondary">Share</button>
+    </div>
+  </div>
+</div>
+
+<div class="tabs">
+  <button class="tab active">Inventory</button>
+  <button class="tab">Reviews</button>
+</div>
+<div class="separator-line"></div>
+
+<div class="search-and-sort">
+  <div class="search-container">
+    <input type="text" class="search-input" placeholder="Search Phones...">
+    <i class="fa fa-search search-icon"></i>
+  </div>
+</div>
+
+<div class="main-content">
+  <div class="filter-section">
+    <h3>Filters</h3>
+    <p><strong>Price Range:</strong></p>
+    <input type="range" min="34000" max="214000" step="1000">
+
+    <p><strong>Brands:</strong></p>
+    <div>
+      <label><input type="checkbox" value="Samsung"> Samsung</label><br>
+      <label><input type="checkbox" value="Apple"> Apple</label><br>
+      <label><input type="checkbox" value="Vivo"> Vivo</label>
+    </div>
+
+    <button class="apply-filter-btn">Apply Filters</button>
+  </div>
+
+  <div class="product-list">
+    <!-- Pagination and Sort by Section -->
+    <div class="pagination-sort">
+      <div class="pagination">
+        <p>Showing 1-10 of 100 Products</p>
+      </div>
+      <div class="sort-by">
+        <label for="sort-select">Sort by:</label>
+        <div class="sort-container">
+          <select id="sort-select" class="sort-select">
+            <option value="most-popular">Most Popular</option>
+            <option value="price-low-high">Price (Low to High)</option>
+            <option value="price-high-low">Price (High to Low)</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product grid -->
+    <div class="product-grid">
+      <div class="product-card" *ngFor="let phone of vendorPhones">
+        <img [src]="phone.image_url" alt="{{ phone.phone_name }}">
+        <h3>{{ phone.phone_name }}</h3>
+        <p><strong>Memory:</strong> {{ phone.memory }}</p>
+        <p><strong>Condition:</strong> {{ phone.condition }}</p>
+        <p class="price">Rs {{ phone.price }}</p>
       </div>
     </div>
   </div>
-    
-  <div class="tabs">
-    <button class="tab active">Inventory</button>
-    <button class="tab">Reviews</button>
-  </div>
-  <div class="separator-line"></div>
-  
-  <div class="search-and-sort">
-    <input type="text" class="search-input" placeholder="Search Phones...">
-  </div>
-  
-  <div class="main-content">
-    <div class="filter-section">
-        <h3>Filters</h3>
-        <p><strong>Price Range:</strong></p>
-        <input type="range" min="34000" max="214000" step="1000">
-        
-        <p><strong>Brands:</strong></p>
-        <div>
-            <label><input type="checkbox" value="Samsung"> Samsung</label><br>
-            <label><input type="checkbox" value="Apple"> Apple</label><br>
-            <label><input type="checkbox" value="Vivo"> Vivo</label>
-        </div>
-        
-        <button class="apply-filter-btn">Apply Filters</button>
-    </div>
-
-    <div class="product-list">
-        <!-- Pagination and Sort by Section -->
-        <div class="pagination-sort">
-            <div class="pagination">
-                <p>Showing 1-10 of 100 Products</p>
-            </div>
-            <div class="sort-by">
-                <select class="sort-select">
-                    <option value="most-popular">Sort by: Most Popular</option>
-                    <option value="price-low-high">Sort by: Price (Low to High)</option>
-                    <option value="price-high-low">Sort by: Price (High to Low)</option>
-                </select>
-            </div>
-        </div>
-
-        <!-- Product grid -->
-        <div class="product-grid">
-            <div class="product-card" *ngFor="let phone of vendorPhones">
-                <img [src]="phone.image_url" alt="{{ phone.phone_name }}">
-                <h3>{{ phone.phone_name }}</h3>
-                <p><strong>Memory:</strong> {{ phone.memory }}</p>
-                <p><strong>Condition:</strong> {{ phone.condition }}</p>
-                <p class="price">Rs {{ phone.price }}</p>
-            </div>
-        </div>
-    </div>
 </div>
 
-  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">

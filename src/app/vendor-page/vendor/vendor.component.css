@@ -59,45 +59,44 @@
 
 .tabs {
   display: flex;
-  justify-content: center;  
-  gap: 40px;  
-  margin: 30px 0 10px;  
+  justify-content: center;
+  gap: 40px;
+  margin: 30px 0 10px;
 }
 
 .tab {
-  padding: 8px 25px;  
-  background-color: transparent;  
-  color: #333;  
-  border: none;  
-  font-size: 1.1em;  
-  font-weight: 500;  
+  padding: 8px 25px;
+  background-color: transparent;
+  color: #333;
+  border: none;
+  font-size: 1.1em;
+  font-weight: 500;
   cursor: pointer;
   transition: color 0.3s;
 }
 
 .tab.active {
-  background-color: transparent;  
-  color: #ffcc00;  
-  font-weight: bold;  
-  border-bottom: 2px solid #ffcc00;  
+  background-color: transparent;
+  color: #ffcc00;
+  font-weight: bold;
+  border-bottom: 2px solid #ffcc00;
 }
 
 .tab:hover {
-  color: #ffcc00;  
+  color: #ffcc00;
 }
 
 .separator-line {
   width: 100%;
   height: 2px;
-  background-color: #ddd;  
+  background-color: #ddd;
   margin-top: 10px;
 }
 
-/* Adjustments to resolve the layout issue */
 .main-content {
   display: flex;
-  align-items: flex-start; /* Align filter and products at the top */
-  gap: 30px; /* Add space between the filter and products */
+  align-items: flex-start;
+  gap: 30px;
   margin-top: 30px;
 }
 
@@ -108,7 +107,7 @@
   margin-bottom: 20px;
   margin-top: 10px;
   width: 250px;
-  flex-shrink: 0; /* Prevent the filter section from shrinking */
+  flex-shrink: 0;
 }
 
 .filter-section h3 {
@@ -141,28 +140,20 @@
   background-color: #e6b800;
 }
 
-/* Product list alignment */
 .product-list {
-  flex-grow: 1; /* Allow product list to take up remaining space */
-}
-
-/* Reduced margin for better alignment */
-.product-list h2 {
-  font-size: 1.5em;
-  margin-bottom: 5px; /* Reduced bottom margin */
-  margin-top: 10px; /* Reduced top margin */
+  flex-grow: 1;
 }
 
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust columns dynamically */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
   padding: 10px 0;
 }
 
 .product-card {
   background-color: #fff;
-  padding: 10px; /* Reduced padding inside cards */
+  padding: 10px;
   border-radius: 8px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
@@ -199,26 +190,39 @@
 hr {
   border: none;
   border-top: 1px solid #ccc;
-  margin: 10px 0; /* Reduced margin */
+  margin: 10px 0;
 }
 
-/* Center align the search box directly below the tabs and add space from the separator line */
 .search-and-sort {
   display: flex;
-  justify-content: center; /* Center the search box */
-  margin-top: 20px; /* Add space between the search box and the separator line */
+  justify-content: center;
+  margin-top: 20px;
   margin-bottom: 20px;
 }
 
+.search-container {
+  position: relative;
+  width: 350px;
+}
+
 .search-input {
-  width: 350px; /* Set a fixed width similar to the Figma design */
-  padding: 10px;
+  width: 100%;
+  padding: 10px 15px 10px 40px; /* Adjust padding for icon */
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 1em;
 }
 
-/* Pagination and Sort by section */
+.search-icon {
+  position: absolute;
+  left: 10px; /* Align icon to the left */
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2em;
+  color: #333;
+  cursor: pointer;
+}
+
 .pagination-sort {
   display: flex;
   justify-content: space-between;
@@ -233,13 +237,38 @@ hr {
 
 .sort-by {
   font-size: 1.1em;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Modified Sort-By Dropdown */
+.sort-container {
+  position: relative;
+  display: inline-block;
 }
 
 .sort-select {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  appearance: none; /* Remove the default select appearance */
+  background: none; /* Remove background */
+  border: none; /* Remove border */
+  padding-right: 20px; /* Adjust padding to create space for the arrow */
+  padding-left: 0; /* Optional: Adjust based on design */
   font-size: 1em;
-  background-color: white;
+  font-weight: bold; /* To match the Figma design */
   cursor: pointer;
+  color: #333; /* Keep the text color */
+  min-width: 140px; /* Ensures space for longer text options */
 }
+
+.sort-container::after {
+  content: '\25BC'; /* Unicode for a down arrow */
+  position: absolute;
+  right: 5px; /* Adjust the position of the arrow */
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none; /* Ensure clicks register on the select element */
+  font-size: 1em;
+  color: #333;
+}
+
