@@ -15,19 +15,51 @@
         ⭐⭐⭐⭐⭐ <span>(2)</span>
       </div>
 
+     <!-- Share, Price History, Compare -->
+     <div class="actions">
+      <div class="action-item">
+        <i class="fa fa-share-alt"></i>
+        <span>Share</span>
+      </div>
+      <div class="action-item">
+        <i class="fa fa-chart-line"></i>
+        <span>Price History</span>
+      </div>
+      <div class="action-item">
+        <i class="fa fa-exchange-alt"></i>
+        <span>Compare</span>
+      </div>
+    </div>
+
       <!-- Colors Selection -->
+      <div class="color-selection">
+        <span class="selection-label">Color: {{ selectedColor }}</span>
       <div class="color-options">
-        <button *ngFor="let color of mobileData?.colors" class="color-button" [ngClass]="{'active': selectedColor === color}" (click)="selectColor(color)">
+        <button *ngFor="let color of mobileData?.colors" 
+                class="color-button" 
+                [ngClass]="{'active': selectedColor === color}" 
+                (click)="selectColor(color)">
           {{ color }}
         </button>
       </div>
+    </div>
+
+    <hr class="section-divider">
 
       <!-- Memory Selection -->
+      <div class="memory-selection">
+        <span class="selection-label">Internal Memory: {{ selectedMemory }}</span>
       <div class="memory-options">
-        <button *ngFor="let memory of mobileData?.memory" class="memory-button" [ngClass]="{'active': selectedMemory === memory}" (click)="selectMemory(memory)">
+        <button *ngFor="let memory of mobileData?.memory" 
+                class="memory-button" 
+                [ngClass]="{'active': selectedMemory === memory}" 
+                (click)="selectMemory(memory)">
           {{ memory }}
         </button>
       </div>
+    </div>
+
+    <hr class="section-divider">
 
       <!-- Checkboxes for additional info -->
       <div class="details-checks">
@@ -37,18 +69,44 @@
       </div>
 
       <!-- Prices Section -->
-      <div class="price-section">
-        <div class="average-price">
-          <span>Average Price</span>
-          <span>{{ statistics?.avg_price | currency:'PKR' }}</span>
-        </div>
-        <div class="divider"></div> <!-- Line between price boxes -->
-        <div class="lowest-price">
-          <span>Cheapest Option</span>
-          <span>{{ statistics?.lowest_price | currency:'PKR' }}</span>
-          <button class="buy-button">Get via ApnaMobile</button>
-        </div>
+<!-- Prices Section -->
+<div class="price-section">
+  <div class="price-container">
+    <!-- Average Price -->
+    <div class="price-box">
+      <div class="price-label average-label">
+        <span>Average Price</span>
       </div>
+      <div class="price-value">
+        <span>{{ statistics?.avg_price | currency:'PKR' }}</span>
+      </div>
+      <div class="price-details">
+        <span>Sold by {{ statistics?.vendor_count }} Vendors</span>
+      </div>
+    </div>
+
+    <!-- Divider Line between Prices -->
+    <div class="divider-line"></div>
+
+    <!-- Cheapest Option -->
+    <div class="price-box">
+      <div class="price-label cheapest-label">
+        <span>Cheapest Option</span>
+      </div>
+      <div class="price-details">
+        <span>average price: {{ statistics?.avg_price | currency:'PKR' }}</span>
+      </div>
+      <div class="price-value">
+        <span>{{ statistics?.lowest_price | currency:'PKR' }}</span>
+      </div>
+      <button class="buy-button">Get via ApnaMobile</button>
+      <div class="price-seller">
+        <span>Sold by Shandar Mobiles Lahore</span>
+      </div>
+    </div>
+  </div>
+</div>
+
     </div>
   </div>
 

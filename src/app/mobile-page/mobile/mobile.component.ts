@@ -10,7 +10,7 @@ export class MobileComponent implements OnInit {
   mobileData: any = {
     phone_name: 'Samsung Galaxy S23 FE 5G',
     images: [
-      'https://dummyimage.com/300x600/000/fff&text=Samsung+Galaxy+S23+FE',
+      'assets/images/mobile.jpg',
       'https://dummyimage.com/300x600/555/fff&text=Samsung+Image+2',
       'https://dummyimage.com/300x600/888/fff&text=Samsung+Image+3'
     ],
@@ -22,8 +22,8 @@ export class MobileComponent implements OnInit {
     lowest_price: 114000
   };
   selectedImage: string = this.mobileData.images[0];
-  selectedColor: string = '128 GB';
-  selectedMemory: string = 'Cream';
+  selectedColor: string = this.mobileData.colors[0];
+  selectedMemory: string = this.mobileData.memory[0];
   selectedTab: string = 'vendors';
 
   ngOnInit() {}
@@ -42,5 +42,20 @@ export class MobileComponent implements OnInit {
 
   selectTab(tab: string) {
     this.selectedTab = tab;
+  }
+
+  // Placeholder for share functionality
+  share() {
+    console.log("Sharing the product");
+  }
+
+  // Placeholder for price history functionality
+  priceHistory() {
+    console.log("Showing price history");
+  }
+
+  // Placeholder for compare functionality
+  compare() {
+    console.log("Comparing products");
   }
 }
